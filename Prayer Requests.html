@@ -14,7 +14,9 @@
         Prayer is the actual battle</p>
 
 <div class="container">  
-    <form id="contact" action="" method="post">
+    <form  id="contact" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+    action="https://script.google.com/macros/s/AKfycbzwf0iTadk72kG0lJ1vGK6HwBipZSq-40hkxv4/exec">
+   
       <h3 style="color:black">Galatians 6:2</h3>
       <h4 style="color:black">Bear one another's burdens, and so fulfill the law of Christ</h4>
       <h4 class="bold" style="color:black">WE WOULD LOVE TO PRAY FOR YOU!!</h4>
@@ -33,9 +35,16 @@
       <fieldset>
         <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
       </fieldset>
+      <div class="thankyou_message" style="display:none;">
+          <h2>Thanks for your order!
+            We will get back to you soon!</h2>
+          </div>
      
     </form>
   </div>
+
+  <script data-cfasync="false" type="text/javascript"
+src="form-submission-handler.js"></script>
 
 </body>
 </html>
