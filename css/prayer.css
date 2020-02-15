@@ -171,11 +171,9 @@ fieldset {
   padding: 15px;	
   text-align: center;
   line-height: 50px;
-  color:white;
+  color:black;
   margin-top:5%;
   font-size: 500%;
-  font-family: cursive;
-
 }
 span{
     font-size: 500%;
@@ -190,10 +188,9 @@ span{
 
 .blink-title{
 text-align: center;
-color:white;
+color:black;
 margin-top:5%;
 font-size: 300%;
-font-family: 'Abel', sans-serif;
 line-height:40px;
 }
 
@@ -244,7 +241,22 @@ line-height:40px;
   display: block;
   margin: 0 auto;
   margin-top: 4%;
-  justify-content: left;
+ 
+  font-size: 1.2em;
+  
+}
+
+#about li{
+  list-style-position: outside;
+ 
+}
+
+#about ul{
+  margin-left: 40%;
+}
+
+#about ol{
+  margin-left: 5%;
 }
 
 .wendy{
