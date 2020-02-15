@@ -21,8 +21,7 @@ body {
   font-size: 12px;
   line-height: 30px;
   color: black;
-  background-image: url("/img/prayer.jpg");
-  background: url(/img/prayer.jpg) no-repeat center center fixed; 
+  background: url( ../img/prayer.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
