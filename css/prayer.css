@@ -156,7 +156,7 @@ fieldset {
 /*-------------------------BLINK--------------------------*/
 
 .blink{
-    width:30vw;
+    width:26vw;
     height: auto;
     padding: 15px;	
     text-align: center;
@@ -177,7 +177,6 @@ fieldset {
   color:black;
   margin-top:15%;
   font-size: 500%;
-  scroll-padding: auto;
 }
 
 @keyframes blink{
@@ -197,6 +196,7 @@ line-height:40px;
 #navbar {
   overflow: hidden;
   background-color: #333;
+  z-index: 1;
 }
 
 #navbar a {

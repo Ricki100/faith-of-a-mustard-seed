@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/prayer.css">
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/animate.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -12,23 +13,22 @@
   <!--Navbar-->
 
   <div id="navbar">
-      <a class="active" href="javascript:void(0)">Home</a>
+      <a class="active" href="" id="button">Home</a>
       <a href="#about-title">About</a>
-      <a href="javascript:void(0)">Prayer Requests</a>
-      <a href="javascript:void(0)">Testimonies</a>
+      <a href="#prayer">Prayer Requests</a>
+      <!--<a href="javascript:void(0)">Testimonies</a>-->
     </div>
 
   <!--logo reveal-->
 
-  <img class = "logo" src="img/tree.svg" alt="logo">
+  <img class = "logo wow fadeIn delay-1" style="animation-duration: 3s;" src="img/tree.svg" alt="logo">
 
   <!--About us-->
-  <p id="nav-about" style="margin-bottom: 0;"></p>
-<div id="about-title">About Us</div>
+<div id="about-title" class="wow fadeInUp delay-1" style="animation-duration: 1.5s;">About Us</div>
 
-<div id="about">
+<div id="about" class="wow fadeInUp delay-1" style="animation-duration: 1.5s;"">
 
-<img class="wendy" src="img/wendy.png" ALIGN="left">
+<img class="wendy wow fadeInUp delay-2" style="animation-duration: 1.5s;" src="img/wendy.png" ALIGN="left">
 <h3 style="text-transform: uppercase;font-style: normal;">We are a community of faith that lives to tell the world how awesome God is!</h3></br>
 
 <p>The Bible tells us, “He who winneth souls is wise.” (Proverbs 11:30). I don’t know about you, but I want to be a wise woman who wins souls for the Lord in these last days. And something tells me that you do too!!! With that being said, here are some practical ways of how you can win souls to Christ :</p></br>
@@ -93,11 +93,11 @@ Start  sharing Christ Today!
 
 
     <!--title-->
-    <img class="blink" src="img/prayer.svg">
+    <img class="blink " src="img/prayer.svg" id="prayer">
     <p class="blink-title">Every battle is waged in prayer</br>
         Prayer is the actual battle</p>
 
-<div class="container">  
+<div class="container wow fadeInUp delay-1" style="animation-duration: 1.5s;">  
     <form  id="contact" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
     action="https://script.google.com/macros/s/AKfycbzwf0iTadk72kG0lJ1vGK6HwBipZSq-40hkxv4/exec">
    
@@ -129,6 +129,11 @@ Start  sharing Christ Today!
 <script src="js/jquery.min.js"></script>
   <script data-cfasync="false" type="text/javascript"
 src="form-submission-handler.js"></script>
+<script src="js/wow.min.js"></script>
+
+<script>
+  new WOW().init();
+  </script>
 
   <script data-cfasync="false" type="text/javascript"
 src="/js/index.js"></script>
