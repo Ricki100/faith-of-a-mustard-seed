@@ -177,6 +177,7 @@ fieldset {
   color:black;
   margin-top:15%;
   font-size: 500%;
+  scroll-padding: auto;
 }
 
 @keyframes blink{
