@@ -20,7 +20,7 @@ body {
   font-weight: 100;
   font-size: 12px;
   line-height: 30px;
-  color: #777;
+  color: black;
   background-image: url("/img/prayer.jpg");
   background: url(/img/prayer.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -244,6 +244,7 @@ line-height:40px;
   display: block;
   margin: 0 auto;
   margin-top: 4%;
+  justify-content: left;
 }
 
 .wendy{
