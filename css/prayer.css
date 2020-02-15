@@ -164,7 +164,7 @@ fieldset {
     color:white;
     display: block;
     margin:0 auto;
-    margin-top:15%;
+    margin-top:10%;
     animation: blink 1s linear infinite;
 }
 
@@ -175,7 +175,7 @@ fieldset {
   text-align: center;
   line-height: 50px;
   color:black;
-  margin-top:15%;
+  margin-top:10%;
   font-size: 500%;
 }
 
@@ -188,7 +188,8 @@ fieldset {
 .blink-title{
 text-align: center;
 color:black;
-margin-top:2%;
+margin-top:1%;
+margin-bottom: 1%;
 font-size: 300%;
 line-height:40px;
 }
@@ -265,3 +266,7 @@ line-height:40px;
   margin-right:20px;
 }
 
+.faith{
+  font-size:1.2em;
+  text-align: center;
+}
