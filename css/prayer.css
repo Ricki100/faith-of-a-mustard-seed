@@ -175,14 +175,10 @@ fieldset {
   text-align: center;
   line-height: 50px;
   color:black;
-  margin-top:5%;
+  margin-top:15%;
   font-size: 500%;
 }
-span{
-    font-size: 500%;
-    font-family: cursive;
-    animation: blink 1s linear infinite;
-}
+
 @keyframes blink{
 0%{opacity: 0;}
 50%{opacity: .5;}
@@ -192,7 +188,7 @@ span{
 .blink-title{
 text-align: center;
 color:black;
-margin-top:5%;
+margin-top:2%;
 font-size: 300%;
 line-height:40px;
 }
