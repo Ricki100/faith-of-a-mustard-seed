@@ -1,145 +1,40 @@
- 
-  var script_url = "https://script.google.com/macros/s/AKfycbyTQ6pvT4k7mow44VksZlM0cvXVYnXTlsUJfrTcwzhXyrFastIZ/exec";
-  
-  // Make an AJAX call to Google Script
-  function insert_value() {
-    
-	$("#re").css("visibility","hidden");
-	 document.getElementById("loader").style.visibility = "visible";
-	$('#mySpinner').addClass('spinner');
+function doGet(e){
 
-var id1=	$("#id").val();
-	var name= $("#name").val();
-	
-	
-    var url = script_url+"?callback=ctrlq&name="+name+"&id="+id1+"&action=insert";
-  
-
-    var request = jQuery.ajax({
-      crossDomain: true,
-      url: url ,
-      method: "GET",
-      dataType: "jsonp"
-    });
-
-  }
-
-
-  
-  
- 
-  
-  
-  function update_value(){
-	$("#re").css("visibility","hidden");
-     document.getElementById("loader").style.visibility = "visible";
-	
-	
-var id1=	$("#id").val();
-	var name= $("#name").val();
-	
-	
-	
-    var url = script_url+"?callback=ctrlq&name="+name+"&id="+id1+"&action=update";
-  
-
-    var request = jQuery.ajax({
-      crossDomain: true,
-      url: url ,
-      method: "GET",
-      dataType: "jsonp"
-    });
-
-	
-  }
-
-  
- 
-  
-  
-  function delete_value(){
-	$("#re").css("visibility","hidden");
-     document.getElementById("loader").style.visibility = "visible";
-	$('#mySpinner').addClass('spinner');
-var id1=	$("#id").val();
-	var name= $("#name").val();
-	
-	
-    var url = script_url+"?callback=ctrlq&name="+name+"&id="+id1+"&action=delete";
-  
-
-    var request = jQuery.ajax({
-      crossDomain: true,
-      url: url ,
-      method: "GET",
-      dataType: "jsonp"
-    });
-
-  }
-
-
-  
-  
-  // print the returned data
-  function ctrlq(e) {
-  
-	
-	$("#re").html(e.result);
-	$("#re").css("visibility","visible");
-	read_value();
-	
-  }
-  
-  
-
-  $(document).ready(function(){
-
-$("#re").css("visibility","visible");
+    // Change Spread Sheet url
+    var ss = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1QmM6h_7zVOqoye_AGC73DUiiykc7TKc20iMrpyCGXLc/edit#gid=0");
    
-   document.getElementById("loader").style.visibility = "visible";
- var url = script_url+"?action=read";
-
-$.getJSON(url, function (json) {
-
-    // Set the variables from the results array
+   // Sheet Name, Chnage Sheet1 to Users in Spread Sheet. Or any other name as you wish
+    var sheet = ss.getSheetByName("testimonies");
+     
+    return getUsers(sheet); 
+     
+   }
    
    
-  
-
-        // CREATE DYNAMIC TABLE.
-        var table = document.createElement("table");
-
-		
-
-        var header = table.createTHead();
-		var row = header.insertRow(0);     
-		var cell1 = row.insertCell(0);
-		var cell2 = row.insertCell(1);
-	
-		cell1.innerHTML = "<b>ID</b>";
-		cell2.innerHTML = "<b>Name</b>";
-        
-        // ADD JSON DATA TO THE TABLE AS ROWS.
-        for (var i = 0; i < json.records.length; i++) {
-
-            tr = table.insertRow(-1);
-				var tabCell = tr.insertCell(-1);
-                tabCell.innerHTML = json.records[i].ID;
-				tabCell = tr.insertCell(-1);
-				tabCell.innerHTML = json.records[i].NAME;
-            }
-      
-
-        // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-        var divContainer = document.getElementById("showData");
-        divContainer.innerHTML = json.records[i].ID;
-        "<b>ID</b>"
-        divContainer.innerHTML = json.records[i].NAME;
-        "<b>Name</b>"
+   function getUsers(sheet){
+     var jo = {};
+     var dataArray = [];
+   
+   // collecting data from 2nd Row , 1st column to last row and last column
+     var rows = sheet.getRange(2,1,sheet.getLastRow()-1, sheet.getLastColumn()).getValues();
+     
+     for(var i = 0, l= rows.length; i<l ; i++){
+       var dataRow = rows[i];
+       var record = {};
+       record['id'] = dataRow[0];
+       record['name'] = dataRow[1];
+       record['email'] = dataRow[2];
+        record['phone'] = dataRow[3];
+       record['testimony'] = dataRow[4];
        
-		document.getElementById("loader").style.visibility = "hidden";
-		$("#re").css("visibility","visible");
-    });
-    })
-
-  
+       dataArray.push(record);
+       
+     }  
+     
+     jo.user = dataArray;
+     
+     var result = JSON.stringify(jo);
+     
+     return ContentService.createTextOutput(result).setMimeType(ContentService.MimeType.JSON);
+     
+   }  
