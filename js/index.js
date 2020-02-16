@@ -11,6 +11,7 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+//end//
 
 //active menu code//
 
@@ -23,6 +24,7 @@ for (var i = 0; i < btns.length; i++) {
   this.className += " active";
   });
 }
+//end//
 
 //smooth scroll code//
 
@@ -53,9 +55,15 @@ $(document).ready(function(){
   });
 });
 
+//end//
+
+//go to top button
+
 var btn = $('#button');
 
 btn.on('click', function(e) {
  e.preventDefault();
  $('html, body').animate({scrollTop:0}, '400');
 });
+
+//end//
