@@ -1,3 +1,4 @@
+//sticky code//
 window.onscroll = function() {myFunction()};
 
 var navbar = document.getElementById("navbar");
@@ -9,6 +10,18 @@ function myFunction() {
   } else {
     navbar.classList.remove("sticky");
   }
+}
+
+//active menu code//
+
+var header = document.getElementById("navbar");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
 }
 
 //smooth scroll code//
