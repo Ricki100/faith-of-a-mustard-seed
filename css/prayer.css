@@ -35,6 +35,15 @@ body {
   margin: 0 auto;
   position: relative;
 }
+.container.test {
+  max-width:60vw;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  
+}
+
 
 .contact input[type="text"],
 .contact input[type="email"],
@@ -167,7 +176,7 @@ fieldset {
     animation: blink 1s linear infinite;
 }
 
-#about-title{
+.about-title{
   width:100%;
   height: 50px;
   padding: 15px;	
