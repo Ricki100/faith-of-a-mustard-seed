@@ -13,6 +13,8 @@ function myFunction() {
 }
 //end//
 
+
+
 //active menu code//
 
 var header = document.getElementById("navbar");
@@ -66,4 +68,15 @@ btn.on('click', function(e) {
  $('html, body').animate({scrollTop:0}, '400');
 });
 
+//end//
+
+//mobile menu
+function menu() {
+  var x = document.getElementById("navbar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 //end//
