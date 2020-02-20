@@ -41,8 +41,24 @@ body {
   margin: 0 auto;
   position: relative;
 
-  
 }
+@media screen and (max-width: 600px) {
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.container.test {
+  max-width:400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+}
+
+}
+
 
 
 .contact input[type="text"],
@@ -179,9 +195,8 @@ fieldset {
 .about-title{
   width:100%;
   height: 50px;
-  padding: 15px;	
   text-align: center;
-  line-height: 50px;
+  line-height: 2%;
   color:black;
   margin-top:10%;
   font-size: 500%;
@@ -227,7 +242,6 @@ line-height:40px;
   display: block;
   margin: 0 auto;
   margin-top: 4%;
- 
   font-size: 1.2em;
   
 }
@@ -280,7 +294,7 @@ font-size: 3em;
   .social-icon li {
     display: inline-block;
     list-style: none;
-    margin-bottom: 25%;
+    margin-bottom: 20%;
   }
 
   .social-icon li a {
@@ -363,10 +377,47 @@ font-size: 3em;
     }
   }
 
+
+ @media screen and (max-width: 600px) {
+body{
+  background-image: none;
+}
+ }
+
   
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
+}
+
+
+@media screen and (max-width: 600px) {
+#about{
+  max-width:400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+}
+@media screen and (max-width: 600px) {
+.about-title{
+  font-size: 230%;
+}
+.blink-title{
+  font-size: 230%;
+}
+.hands{
+  display: none;
+}
+.birds{
+  display: none;
+}
+.blink{
+  width:60vw;
+}
+.social-icon li a{
+  font-size:4em;
+}
 }
