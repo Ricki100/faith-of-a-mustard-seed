@@ -331,7 +331,7 @@ font-size: 3em;
 
   }
 
-  .topnav a {
+ .topnav a {
     float: left;
     display: block;
     color: #f2f2f2;
@@ -363,17 +363,20 @@ font-size: 3em;
     }
   }
   
-  @media screen and (max-width: 600px) {
+   @media screen and (max-width: 600px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
       right: 0;
       top: 0;
     }
-    .topnav.responsive a {
+     .topnav.responsive a {
       float: none;
       display: block;
    
+    }
+    #navbar{
+      position:fixed;
     }
   }
 
