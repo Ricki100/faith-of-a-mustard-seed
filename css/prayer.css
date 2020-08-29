@@ -364,7 +364,7 @@ font-size: 3em;
   }
   
    @media screen and (max-width: 600px) {
-    .topnav.responsive {position: fixed;}
+    .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
       right: 0;
@@ -374,9 +374,6 @@ font-size: 3em;
       float: none;
       display: block;
    
-    }
-    #navbar{
-      position:fixed;
     }
   }
 
